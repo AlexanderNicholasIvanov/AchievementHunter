@@ -15,3 +15,7 @@ How it works:
 
 # Data collection
 Jk this code does not collect data
+
+# Final notes
+Your excel file will be formatted as Achievements-[your steam id].xlsx
+The reason why I use the steam id instead of the profile name is to avoid the issue of dealing with special characters that users might have in their profiles. This will guarantee some form of consistency
