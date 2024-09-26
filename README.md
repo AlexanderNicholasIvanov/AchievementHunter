@@ -12,3 +12,6 @@ How it works:
     --> you DO NOT have to complete the search. For example, if I want to search for the game "Dead by Daylight", I can type "dead by da" and still get it to appear at the top of my search results or pretty close to it
    ![image](https://github.com/user-attachments/assets/d4038583-f626-4326-b89c-7e477cad1a2d)
 4) Once you select which game you're searching for, you won't need to type anything else. The excel file and sheet have been made
+
+# Data collection
+Jk this code does not collect data
