@@ -3,7 +3,7 @@ import requests, html5lib
 from openpyxl import Workbook, load_workbook
 import os
 
-STEAM_PROFILE_ID_MIN_LENGTH = 17
+STEAM_PROFILE_ID_MIN_LENGTH = 17 # if your profile number is shorter than 17 characters, then you'll have to edit this number
 class Achievements:
     def __init__(self, steam_id, game_name):
         self.steam_id = steam_id
@@ -26,7 +26,6 @@ class Achievements:
         response = requests.get(url)
         app_list = response.json()
         app_list = sorted(app_list['applist']['apps'], key=lambda x: x['appid'])
-
         relevent_list = {}
         counter = 1
 
@@ -59,6 +58,7 @@ class Achievements:
         firstLast = []
         achievements = achievements[::-1]
         for achievement in achievements:
+            # remove any garbage data or strings or any special characters (in this case \n, \r and \t)
             achievement = [" ".join(i.split("\t")).strip() for i in achievement.text.strip().split("\n") if i and i != "\r"]
             firstLast.append(achievement)
         return firstLast
