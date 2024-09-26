@@ -13,11 +13,10 @@ class Achievements:
 
         # is this a custome id or a profile id
         if self.steam_id.isdigit() and len(self.steam_id) == STEAM_PROFILE_ID_LENGTH:
-            url = f"https://steamcommunity.com/profile/{self.steam_id}/stats/{game_id}/?tab=achievements"
+            url = f"https://steamcommunity.com/profiles/{self.steam_id}/stats/{game_id}/?tab=achievements"
         else:
             url = f"https://steamcommunity.com/id/{self.steam_id}/stats/{game_id}/achievements"
         r = requests.get(url)
-
         soup = BeautifulSoup(r.content, 'html.parser')
         return soup
 
