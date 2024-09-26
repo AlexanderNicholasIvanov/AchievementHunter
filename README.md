@@ -6,7 +6,7 @@ First, before you run, make sure your steam profile is public. As mentioned, thi
 
 How it works:
 1) Run the script
-2) Enter your steam id (not the name on your profile but your actual steam id). Unfortunately this code is still bugging if you have a profile id but that will be updated soon
+2) Enter your steam id (not the name on your profile but your actual steam id or custom steam id)
 3) Enter the game you're searching for
     --> you will get a list of games
     --> you DO NOT have to complete the search. For example, if I want to search for the game "Dead by Daylight", I can type "dead by da" and still get it to appear at the top of my search results or pretty close to it
