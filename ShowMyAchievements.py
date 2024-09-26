@@ -3,7 +3,7 @@ import requests, html5lib
 from openpyxl import Workbook, load_workbook
 import os
 
-STEAM_PROFILE_ID_LENGTH = 17
+STEAM_PROFILE_ID_MIN_LENGTH = 17
 class Achievements:
     def __init__(self, steam_id, game_name):
         self.steam_id = steam_id
@@ -12,7 +12,7 @@ class Achievements:
     def get_page(self, game_id):
 
         # is this a custome id or a profile id
-        if self.steam_id.isdigit() and len(self.steam_id) == STEAM_PROFILE_ID_LENGTH:
+        if self.steam_id.isdigit() and len(self.steam_id) >= STEAM_PROFILE_ID_MIN_LENGTH:
             url = f"https://steamcommunity.com/profiles/{self.steam_id}/stats/{game_id}/?tab=achievements"
         else:
             url = f"https://steamcommunity.com/id/{self.steam_id}/stats/{game_id}/achievements"
